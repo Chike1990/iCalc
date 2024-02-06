@@ -49,7 +49,7 @@ function calculate(){
         case "-":
             calculation = previous - current;
             break;
-        case "&divide;":
+        case "/":
             calculation = previous / current
             break;
         default:
@@ -98,3 +98,10 @@ percentButton.addEventListener('click', button=>{
 dotButton.addEventListener('click', button =>{
     appendNumberToCurrentNumber(".")
 })
+
+pmButton.addEventListener('click', button => {
+    if (currentNumber !== '') {
+        currentNumber = currentNumber * -1;
+        updateDisplayArea();
+    }
+});
